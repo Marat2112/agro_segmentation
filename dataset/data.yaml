@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['leaf', 'root', 'stem']
+
+roboflow:
+  workspace: s-workspace-kdnhq
+  project: agro-segmentation
+  version: 2
+  license: Private
+  url: https://app.roboflow.com/s-workspace-kdnhq/agro-segmentation/2
