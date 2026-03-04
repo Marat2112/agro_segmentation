@@ -1,0 +1,9 @@
+ultralytics
+opencv-python
+numpy
+streamlit
+torch
+torchvision
+pandas
+scikit-image
+torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
