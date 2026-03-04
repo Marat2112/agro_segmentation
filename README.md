@@ -79,7 +79,7 @@ python train_yolo26_cpugpu.py
 ### Пакетная обработка
 
 ```bash
-python batch_predict_yolo26.py
+python predict_agro_segment.py
 ```
 
 Результат:
