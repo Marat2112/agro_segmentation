@@ -11,7 +11,7 @@ def compute_scale_from_checkerboard(image_path, square_size_mm=10):
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # 🔥 усиливаем контраст
+    #  контраст 
     gray = cv2.GaussianBlur(gray, (5, 5), 0)
     gray = cv2.equalizeHist(gray)
 
@@ -20,7 +20,7 @@ def compute_scale_from_checkerboard(image_path, square_size_mm=10):
         + cv2.CALIB_CB_NORMALIZE_IMAGE
     )
 
-    # ⚠️ расширенный список
+    # список
     possible_patterns = [
         (4, 7),  
         (7, 4),  
@@ -77,5 +77,6 @@ def auto_compute_scale_from_folder(folder_path, square_size_mm=10):
 
     mean_scale = float(np.mean(scales))
     print(f"[CALIB] Средний масштаб: {mean_scale:.5f} mm/px")
+
 
     return mean_scale
