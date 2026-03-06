@@ -118,7 +118,7 @@ streamlit run app_mod.py
 Запуск бота:
 
 ```bash
-python predict_agro_segment.py
+python telegram_bot.py
 ```
 
 Далее найти готового бота в поиске в телеграм @agro_segment_analyz_bot, либо создайте бота дать имя и так далее скопировать API и в скрипте изменить TOKEN на ваш.
