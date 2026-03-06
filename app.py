@@ -10,9 +10,9 @@ from morphometry import analyze_segmentation
 from calibration import auto_compute_scale_from_folder
 from morphometry import draw_metrics_overlay
 
-# ======================
+
 # конфиг
-# ======================
+
 MODEL_PATH = "runs/segment/yolo26_final/weights/best.pt"
 CALIB_DIR = "calib"
 SQUARE_MM = 10
@@ -20,18 +20,16 @@ SQUARE_MM = 10
 st.set_page_config(page_title="Agro Morphometry", layout="wide")
 st.title("🌱 Plant Morphometry Demo")
 
-# ======================
-# загрузим модель
-# ======================
+
 @st.cache_resource
 def load_model():
     return YOLO(MODEL_PATH)
 
 model = load_model()
 
-# ======================
-# вычислим масштаб
-# ======================
+
+#  масштаб
+
 @st.cache_data
 def get_scale():
     return auto_compute_scale_from_folder(CALIB_DIR, square_size_mm=SQUARE_MM)
@@ -43,9 +41,9 @@ if scale is None:
 else:
     st.success(f"✅ Масштаб: {scale:.5f} mm/pixel")
 
-# ======================
-# интерфейс загрузки и обработки изображения
-# ======================
+
+# интерфейс загрузки обработки 
+
 uploaded = st.file_uploader(
     "Загрузите изображение растения",
     type=["jpg", "jpeg", "png"]
@@ -93,4 +91,5 @@ if uploaded is not None:
 
         if metrics_mm:
             st.write("**Millimeters:**")
+
             st.json(metrics_mm)
