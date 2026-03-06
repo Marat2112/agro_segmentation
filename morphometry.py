@@ -30,7 +30,7 @@ def count_connected_components(mask: np.ndarray) -> int:
 
 
 
-# ФУНКЦИЯ АНАЛИЗА
+# анализ
 
 
 def analyze_segmentation(results):
@@ -50,7 +50,7 @@ def analyze_segmentation(results):
     masks = results.masks.data.cpu().numpy()
     classes = results.boxes.cls.cpu().numpy().astype(int)
 
-    # классы по ТЗ:
+    # части растений индексируем
     LEAF = 0
     ROOT = 1
     STEM = 2
@@ -59,7 +59,7 @@ def analyze_segmentation(results):
     stem_mask = None
     leaf_mask = None
 
-    # объединяем маски по классам
+    # классы группируем
     for mask, cls in zip(masks, classes):
         mask = (mask > 0.5).astype(np.uint8)
 
@@ -72,7 +72,7 @@ def analyze_segmentation(results):
         elif cls == LEAF:
             leaf_mask = mask if leaf_mask is None else np.maximum(leaf_mask, mask)
 
-    # вычисления 
+    # математика 
 
     root_length = skeleton_length(root_mask) if root_mask is not None else 0
     root_area = mask_area(root_mask) if root_mask is not None else 0
@@ -117,5 +117,6 @@ def draw_metrics_overlay(image, metrics_mm):
             cv2.LINE_AA,
         )
         y += 30
+
 
     return img
