@@ -5,8 +5,7 @@ streamlit
 torch
 torchvision
 pandas
-scikit-image
-torch 
+scikit-image 
 torchvision 
 torchaudio --index-url https://download.pytorch.org/whl/cu121
 python-telegram-bot
