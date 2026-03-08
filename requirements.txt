@@ -1,5 +1,5 @@
 ultralytics
-opencv-python
+opencv-python-headless
 numpy
 streamlit
 torch
@@ -10,4 +10,3 @@ torch
 torchvision 
 torchaudio --index-url https://download.pytorch.org/whl/cu121
 python-telegram-bot
-pandas
