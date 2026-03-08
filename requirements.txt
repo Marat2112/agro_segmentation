@@ -1,6 +1,4 @@
 ultralytics
-opencv-python-headless==4.8.1.78
-numpy
 streamlit
 torch
 torchvision
@@ -8,4 +6,8 @@ pandas
 scikit-image 
 torchvision 
 torchaudio --index-url https://download.pytorch.org/whl/cu121
+opencv-python-headless==4.8.1.78
+numpy==1.26.4
+matplotlib
+Pillow
 python-telegram-bot
