@@ -58,7 +58,8 @@
 * `dataset` - база фото для обучения
 * `yolo26n-seg.pt` - Модель YOLO26 (instance segmentation).
 * `app_mod.py` - модифицированный app.py на пакетный инференс + графики + скачивание CSV
-* `telegram_bot.py` - telegram бот анализа растений 
+* `telegram_bot.py` - telegram бот анализа растений
+* `packages.txt` - необходимые пакеты библиотек для создания приложения и деплоя в облако Streamlit Community Cloud
 
 ---
 
@@ -131,3 +132,7 @@ python telegram_bot.py
 * размер: **5×8**
 * размер клетки: **10 мм**
 
+## Загрузка в облако Streamlit Community Cloud (Deploy App)
+Произведена загрузка используется аккаунт Github необходим ссылка репозитория , ветка и скрипт app_mpd.py
+Рабочий готовый прототип:
+https://agrosegmentationkarimov.streamlit.app/
