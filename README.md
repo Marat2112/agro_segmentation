@@ -60,7 +60,6 @@
 * `app_mod.py` - модифицированный app.py на пакетный инференс + графики + скачивание CSV
 * `telegram_bot.py` - telegram бот анализа растений
 * `packages.txt` - необходимые пакеты библиотек для создания приложения и деплоя в облако Streamlit Community Cloud
-* `app_live.py` - это приложение только через деплой в облако Streamlit Community Cloud, с помощью камеры в реальном времени показывает морфометрику растений (если вдруг интересно)
 
 ---
 
@@ -138,5 +137,4 @@ python telegram_bot.py
 Произведена загрузка используется аккаунт Github необходим ссылка репозитория , ветка и скрипт app_mpd.py
 Рабочий готовый прототип:
 https://agrosegmentationkarimov.streamlit.app/
-2. AI анализ расстений с помощью камеры в реальном времени
-   https://agrosegmentationcamlive.streamlit.app/
+
