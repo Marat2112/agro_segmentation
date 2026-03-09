@@ -6,7 +6,7 @@ pandas
 scikit-image 
 torchvision 
 torchaudio --index-url https://download.pytorch.org/whl/cu121
-opencv-contrib-python
+opencv-contrib-python-headless
 numpy==1.26.4
 matplotlib
 Pillow
