@@ -4,7 +4,7 @@ import numpy as np
 from ultralytics import YOLO
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 
-model = YOLO("best.pt")
+model = YOLO("runs/segment/yolo26_final/weights/best.pt")
 
 PIXEL_TO_MM = 0.5  # это коэффициент пересчета так как в реальном виде
 
@@ -44,4 +44,5 @@ st.title("Live Agro Morphometry")
 webrtc_streamer(
     key="agro",
     video_processor_factory=VideoProcessor
+
 )
