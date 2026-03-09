@@ -139,4 +139,4 @@ python telegram_bot.py
 Рабочий готовый прототип:
 https://agrosegmentationkarimov.streamlit.app/
 2. AI анализ расстений с помощью камеры в реальном времени
-   
+   https://agrosegmentationcamlive.streamlit.app/
